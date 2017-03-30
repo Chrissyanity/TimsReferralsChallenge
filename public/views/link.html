@@ -1,0 +1,34 @@
+<div class="container" ng-controller="referralCtrl">
+    <div ng-controller="referralCtrl">
+        <div class="row">
+            <div class="col-md-4">
+<label>Add a link: </label><input type="text" placeholder="Add a new link" ng-model="info.linktitle">
+<button type="button" ng-click="addReferral(linktitle)">Add</button>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <table style="width:100%" class="table">
+                  <tr>
+                    <th colspan="3">
+                      <p>Link Title</p></th>
+                      <th colspan="3">
+                        <p>Clicks</p></th>
+                        <th colspan="3">
+                          <p>Edit</p></th>
+                          <th colspan="3">
+                            <p>Delete</p></th></tr>
+                            <tr>
+                              <td colspan="3">
+                                <span>{{linktitle}}</span></td>
+                                <td colspan="3">
+                                  <span>{{clicks}}</span></td>
+                                  <td colspan="3">
+                                    <button type="button" ng-click="editReferral()">Edit</button></td>
+                                    <td colspan="3">
+                                      <button type="button" ng-click="deleteReferral()">Delete</button></td>
+
+                              </tr>
+
+                      </div>
+                    </div>

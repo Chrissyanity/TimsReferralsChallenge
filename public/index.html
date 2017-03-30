@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="referralModule">
   <head>
     <meta charset="utf-8">
     <title>Tim's Referrals</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body>
+  <body ng-controller="referralCtrl">
 
 
 
+<h1>Referral List</h1>
+
+<div>
+  <nav>
+    <a href ="#/landing">Home</a>
+    <a href="#/link">Referral Page</a>
+
+</nav>
+</div>
 
 
-
-
-
-
+<ng-view></ng-view>
 
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js'></script>
@@ -23,5 +30,9 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.js'></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/referralModule.js"></script>
+    <script src="scripts/referralController.js"></script>
+    <script src="scripts/referralFactory.js"></script>
+    <script src="scripts/infoFactory.js"></script>
   </body>
 </html>
