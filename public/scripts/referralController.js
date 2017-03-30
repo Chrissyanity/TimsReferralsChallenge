@@ -8,20 +8,20 @@ app.controller('referralCtrl', function($scope, referralFactory){
   // }
 
   referralFactory.getReferral().then(function() {
-        $scope.info = referralFactory.update();
-        console.log($scope.info);
+        $scope.newLink = referralFactory.update();
+        console.log($scope.newLink);
     });
 
 $scope.deleteLink = function(removeReferral){
   console.log(removeReferral);
   referralFactory.deleteReferral(removeReferral).then(function(){
-    $scope.info = referralFactory.update();
+    $scope.newLink = referralFactory.update();
   });
 };
 
 $scope.addToList = function(newInformation){
   referralFactory.addReferral(newInformation).then(function(){
-    $scope.info = referralFactory.update();
+    $scope.newLink = referralFactory.update();
   });
 };
 
@@ -31,7 +31,7 @@ $scope.changeToList = function(infoToEdit, id){
     linktitle: infoToEdit
   };
   referralFactory.editReferral(informationToChange).then(function(){
-    $scope.referralInfo = referralFactory.update();
+    $scope.newLink = referralFactory.update();
   });
 };
 
