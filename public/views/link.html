@@ -1,5 +1,6 @@
 <div class="container" ng-controller="referralCtrl">
     <div ng-controller="referralCtrl">
+      <h1 class="linkHeader">Grow the web with referrals!</h1>
         <div class="row">
             <div class="col-md-4">
                 <label>Add a link: </label><input type="text" placeholder="Add a new link" ng-model="info.linktitle">
@@ -26,7 +27,7 @@
 
                         <tr ng-repeat="link in newLink track by $index">
                             <td colspan="3">
-                                <span>{{ link.linktitle }}</span>
+                                <a href="#/landing"><span>{{ link.linktitle }}</span></a>
                             </td>
                             <td colspan="3">
                                 <span>{{ link.clicks }}</span>
