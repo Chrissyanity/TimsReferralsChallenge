@@ -29,7 +29,8 @@ var info = [];
     var newReferral = {
       linktitle: newReferral,
       clicks: 0
-    };
+  };
+      console.log(newReferral);
     var promise = $http({
       method: 'POST',
       url: '/add-referral',
@@ -40,6 +41,7 @@ var info = [];
     });
     return promise;
   };
+
 
 function editReferral(updateReferral){
   var referralThing = {
@@ -67,25 +69,25 @@ function deleteReferral(removeReferral){
 };
 
 
-  var referralInfo = {};
-
-  var referralData = {};
-  return {
-    sendReferral: sendReferral,
-    returnReferral: returnReferral,
-    exportTo: function (data) {
-      referralData = data;
-    },
-    importIn: function () {
-      return referralData;
-    }
-  }
-
-  function sendReferral(selectedInfo) {
-    referralInfo = selectedInfo;
-  }
-  function returnReferral() {
-    return referralInfo;
-  };
+  // var referralInfo = {};
+  //
+  // var referralData = {};
+  // return {
+  //   sendReferral: sendReferral,
+  //   returnReferral: returnReferral,
+  //   exportTo: function (data) {
+  //     referralData = data;
+  //   },
+  //   importIn: function () {
+  //     return referralData;
+  //   }
+  // }
+  //
+  // function sendReferral(selectedInfo) {
+  //   referralInfo = selectedInfo;
+  // }
+  // function returnReferral() {
+  //   return referralInfo;
+  // };
   });
 // });

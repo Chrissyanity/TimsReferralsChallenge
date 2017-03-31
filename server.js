@@ -42,7 +42,8 @@ app.get('/get-referral', function(req, res) {
 app.post('/add-referral', function(req, res, next) {
     var results = [];
     var data = {
-        linktitle: req.body.linktitle
+        linktitle: req.body.linktitle,
+        clicks: req.body.clicks
     };
 
     pg.connect(connectionString, function(err, client, done) {
