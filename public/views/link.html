@@ -1,50 +1,50 @@
 <!-- <div class="container" ng-controller="referralCtrl"> -->
-    <div ng-controller="referralCtrl" class="input">
-      <h1 class="linkHeader">Grow the web with referrals!</h1>
-        <!-- <div class="row">
+<div ng-controller="referralCtrl" class="input">
+    <h1 class="linkHeader">Grow the web with referrals!</h1>
+    <!-- <div class="row">
             <div class="col-md-4" id="inputColumn"> -->
-                <label>Add a link: </label><input type="text" placeholder="Add a new link" ng-model="newReferral.linktitle">
-                <button type="submit" ng-click="addToList()">Add</button>
-            </div>
+    <label>Add a link: </label><input type="text" placeholder="Add a new link" ng-model="newReferral.linktitle">
+    <button type="submit" ng-click="addToList()">Add</button>
+</div>
 <div class="container" ng-controller="referralCtrl">
 
-            <div class="row">
-                <div class="col-md-3">
+    <div class="row1">
+        <div class="col-md-3">
 
-                    <table style="width:100%" class="table">
-                        <tr>
-                            <th colspan="3">
-                                <p>Link Title</p>
-                            </th>
-                            <th colspan="3">
-                                <p>Clicks</p>
-                            </th>
-                            <th colspan="3">
-                                <p>Edit</p>
-                            </th>
-                            <th colspan="3">
-                                <p>Delete</p>
-                            </th>
-                        </tr>
+            <table style="width:100%" class="table">
+                <tr>
+                    <th colspan="3" class="tableData">
+                        <p>Link Title</p>
+                    </th>
+                    <th colspan="3" class="tableData">
+                        <p>Clicks</p>
+                    </th>
+                    <th colspan="3">
+                        <p>Edit</p>
+                    </th>
+                    <th colspan="3">
+                        <p>Delete</p>
+                    </th>
+                </tr>
 
-                        <tr ng-repeat="link in newLink track by $index">
-                            <td colspan="3">
-                                <a href="#/landing" ng-click="clickAdd=clickAdd + 1"><span>{{ link.linktitle }}</span></a>
-                            </td>
-                            <td colspan="3">
-                                <span>{{ link.clicks }}</span>
-                            </td>
+                <tr ng-repeat="link in newLink track by $index">
+                    <td colspan="3" class="tableData">
+                        <a ng-click="link.clicks=link.clicks+1" href="#/landing?=link={{link.linktitle}}"><span>{{ link.linktitle }}</span></a>
+                    </td>
+                    <td colspan="3" class="tableData">
+                        <span>{{ link.clicks }}</span>
+                    </td>
 
-                            <td colspan="3">
-                                <button type="button" ng-click="editReferral()">Edit</button></td>
-                            <td colspan="3">
-                                <button type="button" ng-click="deleteReferral()">Delete</button></td>
+                    <td colspan="3">
+                        <button type="button" ng-click="editReferral()">Edit</button></td>
+                    <td colspan="3">
+                        <button type="button" ng-click="deleteLink()">Delete</button></td>
 
-                        </tr>
+                </tr>
 
 
-            </div>
-              </div>
-                </div>
-                  </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>

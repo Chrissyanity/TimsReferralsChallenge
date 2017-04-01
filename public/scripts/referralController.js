@@ -1,6 +1,6 @@
 var app = angular.module('referralModule');
 
-app.controller('referralCtrl', function($scope, referralFactory){
+app.controller('referralCtrl', function($scope, referralFactory, $location){
 
 
 
@@ -13,7 +13,7 @@ app.controller('referralCtrl', function($scope, referralFactory){
 //
 //
 $scope.deleteLink = function(){
-  referralFactory.deleteReferral($scope.removeReferral).then(function(){
+  referralFactory.deleteReferral().then(function(){
     $scope.newLink = referralFactory.update();
   });
 };
@@ -21,23 +21,11 @@ $scope.deleteLink = function(){
 $scope.addToList = function(){
   referralFactory.addReferral($scope.newReferral.linktitle).then(function(){
     $scope.newLink = referralFactory.update();
-// $scope.addToList = function(newReferral){
-//   referralFactory.addReferral(newReferral).then(function(){
-//     $scope.newLink = referralFactory.update();
-  });
+});
 };
-//
-//
-// $scope.addToList = function(newInformation){
-//   var informationToAdd = {
-//     linktitle: newInformation
-//   };
-// referralFactory.addReferral(informationToAdd).then(function(){
-//
-//     $scope.newLink = referralFactory.update();
-//   });
-// };
-//
+
+
+
 // $scope.changeToList = function(infoToEdit, id){
 //   var informationToChange = {
 //     id: id,
@@ -51,3 +39,13 @@ $scope.addToList = function(){
 //
 //
 });
+
+// $scope.location = $location;
+//    $scope.$watch('location.search()', function() {
+//        $scope.target = ($location.search()).link;
+//    }, true
+//  );
+//
+//    $scope.changeTarget = function(name) {
+//        $location.search('link', name);
+//    }

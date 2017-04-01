@@ -11,6 +11,8 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl: '../views/link.html'
     })
 
+  
+
 .otherwise({redirectTo: '/landing'});
 
 $locationProvider.hashPrefix('');

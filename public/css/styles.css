@@ -1,18 +1,50 @@
-.row {
+/*.row {
   border: 1px solid black;
   margin: auto;
       width: 60%;
       padding: 10px;
 
-}
+}*/
 
 .input {
   text-align: center;
 }
 
 .container {
-  margin: auto;
-   width: 50%;
-
-   padding: 10px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+   /*width: 50%;*/
+padding-left: 435px;
+   /*padding: 10px;*/
 }
+
+.row1 {
+  margin: auto;
+  padding-left: 37%;
+  padding-top: 5%;
+}
+
+.tableData {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #E8E7E5;
+}
+
+.table {
+  border: 1px solid black;
+}
+
+.jumbotron  {
+  background-color: #5CB0C3 !important;
+  background-size: cover;
+  }
+
+  .headSubText {
+    text-align: center;
+  }
+
+  .landText {
+    text-align: center;
+  }
