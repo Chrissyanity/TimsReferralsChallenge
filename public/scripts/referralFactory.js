@@ -15,6 +15,7 @@ app.factory('referralFactory', function($http) {
         return info;
     };
 
+//retrieving table information from database
     function getReferral() {
         var promise = $http({
             method: 'GET',
@@ -25,6 +26,7 @@ app.factory('referralFactory', function($http) {
         return promise;
     };
 
+//adding new link information to database
     function addReferral(newReferral) {
         var newReferral = {
             linktitle: newReferral,

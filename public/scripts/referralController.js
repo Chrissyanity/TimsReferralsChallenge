@@ -4,14 +4,14 @@ app.controller('referralCtrl', function($scope, referralFactory, $location){
 
 
 
+//functionality for CRUD commands
 
   referralFactory.getReferral().then(function() {
         $scope.newLink = referralFactory.update();
         console.log($scope.newLink);
     });
-//
-//
-//
+
+
 $scope.deleteLink = function(){
   referralFactory.deleteReferral().then(function(){
     $scope.newLink = referralFactory.update();
@@ -26,26 +26,18 @@ $scope.addToList = function(){
 
 
 
-// $scope.changeToList = function(infoToEdit, id){
-//   var informationToChange = {
-//     id: id,
-//     linktitle: infoToEdit
-//   };
-//   referralFactory.editReferral(informationToChange).then(function(){
-//     $scope.newLink = referralFactory.update();
-//   });
-// };
-//
-//
-//
+$scope.changeToList = function(infoToEdit, id){
+  var informationToChange = {
+    id: id,
+    linktitle: infoToEdit
+  };
+  referralFactory.editReferral(informationToChange).then(function(){
+    $scope.newLink = referralFactory.update();
+  });
+};
+
 });
 
-// $scope.location = $location;
-//    $scope.$watch('location.search()', function() {
-//        $scope.target = ($location.search()).link;
-//    }, true
-//  );
-//
-//    $scope.changeTarget = function(name) {
-//        $location.search('link', name);
-//    }
+// var str = "http://www.your_url.com/landing/?link=wolverines";
+// var pagenum = str.match(/\?link\=(.*)/)[1];
+// document.getElementById("result").innerHTML = pagenum[0].toUpperCase() + pagenum.slice(1)+" are awesome!";

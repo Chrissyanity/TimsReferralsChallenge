@@ -29,7 +29,7 @@
 
                 <tr ng-repeat="link in newLink track by $index">
                     <td colspan="3" class="tableData">
-                        <a ng-click="link.clicks=link.clicks+1" href="#/landing?=link={{link.linktitle}}"><span>{{ link.linktitle }}</span></a>
+                        <a ng-click="link.clicks=link.clicks+1" href="#/landing?={{link.linktitle}}"><span>{{ link.linktitle }}</span></a>
                     </td>
                     <td colspan="3" class="tableData">
                         <span>{{ link.clicks }}</span>
